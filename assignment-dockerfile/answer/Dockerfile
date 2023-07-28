@@ -12,7 +12,7 @@ COPY package*.json ./
 
 RUN npm install && npm cache clean --force
 
-COPY . .
+COPY . . //copying everything from current directory on the host to current pwd in the image 
 
 ENTRYPOINT ["tini", "--"]
 
